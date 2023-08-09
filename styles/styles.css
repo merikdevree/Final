@@ -78,7 +78,11 @@ nav a:hover {
 }
 
 /* header */
-
+@media screen and (max-width: 768px) {
+    h1 {
+        white-space: nowrap;
+    }
+}
 header div {
     max-width: 80%;
     margin: 10em auto;
@@ -114,7 +118,7 @@ header div a:active {
 
 header div a,
 header p {
-    font-family: "Consolas";
+    font-family: "Consolas", "Fira Code", "Roboto", sans-serif;
 }
 header p {
     color: #1f67cc;
