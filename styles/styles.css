@@ -17,6 +17,7 @@ body {
 }
 
 h1 {
+    font-family: "Space Mono", "monospace";
     font-size: 3.4rem;
 }
 
@@ -37,7 +38,15 @@ h2 {
 nav {
     background-color: #0050bf;
 }
-
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 nav ul {
     display: flex;
     justify-content: left;
@@ -77,6 +86,7 @@ header div {
     flex-direction: column;
     justify-content: center;
 }
+
 h1 {
     margin-bottom: 1rem;
 }
@@ -102,6 +112,10 @@ header div a:active {
     color: #fff;
 }
 
+header div a,
+header p {
+    font-family: "Consolas";
+}
 header p {
     color: #1f67cc;
 }
@@ -122,13 +136,35 @@ header p {
     max-width: 80%;
     margin: 0 auto;
 }
-
 .album {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1em;
 }
+@media screen and (max-width: 768px) {
+    .album {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    /* make card scale properly */
+    .card {
+        max-width: 261px;
+        max-height: fit-content;
+    }
+    section {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
 
+@media screen and (max-width: 576px) {
+    .album {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
 .card {
     background-color: #fff;
     border: 1px solid #dfdfdf;
@@ -162,6 +198,11 @@ header p {
     align-items: center;
     height: 50px;
 }
+@media screen and (max-width: 768px) {
+    .card .buttons div {
+        height: 100px;
+    }
+}
 .card .buttons div button {
     background-color: #fff;
     border: 1px solid #6c757d;
@@ -169,6 +210,11 @@ header p {
     height: 31px;
     text-size-adjust: 14px;
     padding: 4px 8px;
+}
+@media screen and (max-width: 768px) {
+    .card .buttons div button {
+        height: fit-content;
+    }
 }
 .card .buttons div button:hover {
     cursor: pointer;
@@ -192,6 +238,15 @@ header p {
     flex-direction: row;
     justify-content: space-between;
     gap: 20rem;
+}
+@media screen and (max-width: 768px) {
+    #about .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #about img {
+        margin: 0 auto;
+    }
 }
 #about p {
     margin-bottom: 1rem;
@@ -233,6 +288,18 @@ header p {
     color: #696969;
 }
 
+@media screen and (max-width: 768px) {
+    #skills ul {
+        justify-content: center;
+    }
+    #skills li {
+        margin-bottom: 2rem;
+    }
+    #skills svg {
+        width: 48px;
+        height: 48px;
+    }
+}
 /* contact */
 #contact {
     max-width: 80%;
@@ -241,6 +308,7 @@ header p {
 
 #contact ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     align-items: center;
     gap: 2rem;
