@@ -111,10 +111,12 @@ header div a:active {
     background-color: #0050bf;
     color: #fff;
 }
-
+header a span {
+    white-space: nowrap;
+}
 header div a,
 header p {
-    font-family: "Consolas", "Fira Code", "Roboto", sans-serif;
+    font-family: "Fira Code", "Roboto", sans-serif;
 }
 header p {
     color: #1f67cc;
