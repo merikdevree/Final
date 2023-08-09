@@ -30,6 +30,7 @@ a {
 }
 h2 {
     font-size: 2.4rem;
+    margin-bottom: 1rem;
 }
 
 /* nav layout */
@@ -127,37 +128,58 @@ header p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1em;
 }
-.project {
-    border: 1px solid #696969;
-    position: relative;
-}
-.project img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
-/* overlay div on image on hover */
-.project div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
+.card {
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    width: 348px;
+    height: 348px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+.card img {
+    object-fit: cover;
+}
+.card > div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+.card p {
+    margin-bottom: auto;
+}
+.card .buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.project div p {
-    margin: auto;
+.card .buttons div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
 }
-.project div:hover {
-    opacity: 1;
+.card .buttons div button {
+    background-color: #fff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    height: 31px;
+    text-size-adjust: 14px;
+    padding: 4px 8px;
+}
+.card .buttons div button:hover {
+    cursor: pointer;
+    background-color: #6c757d;
+    color: #fff;
+}
+.card .buttons div button a {
+    color: #6c757d;
+}
+.card .buttons div button a:hover {
+    color: #fff;
 }
 /* todo: projects and everything */
 #about {
@@ -173,6 +195,16 @@ header p {
 }
 #about p {
     margin-bottom: 1rem;
+}
+#about .content div {
+    display: flex;
+    flex-direction: column;
+}
+#about img {
+    max-height: 300px;
+    max-width: 600px;
+    height: auto;
+    width: auto;
 }
 
 /* skills */
